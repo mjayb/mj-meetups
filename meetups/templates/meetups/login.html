@@ -1,0 +1,41 @@
+    
+{% extends 'meetups/main.html'%}
+{% load static %}
+{%block title%}Login{%endblock %}
+{% block content%}
+
+
+
+<section class="contact_section layout_padding">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-5">
+            <div class="form_container">
+              <div class="heading_container">
+                <h2>
+                  <h2>Login </h2>
+                </h2>
+              </div>
+              <form action="" method="POST" >
+                  {%csrf_token%}
+                <div>
+                  <input type="email" placeholder="Enter your email "name="email"/>
+                </div>
+                <div>
+                  <input type="password" placeholder="Enter your password" name="password" />
+                </div>
+               
+                <div class="d-flex ">
+                  <button>
+                   LOGIN
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </section>
+
+        {% endblock%}

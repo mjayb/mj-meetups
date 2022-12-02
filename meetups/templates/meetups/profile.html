@@ -1,0 +1,39 @@
+    
+{% extends 'meetups/main.html'%}
+{% load static %}
+{%block title%}Profile{%endblock %}
+{% block content%}
+
+
+
+<section class="contact_section layout_padding">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-5">
+            <div class="form_container">
+              <div class="heading_container">
+                <h2>
+                  <h2>Update Profile </h2>
+                </h2>
+              </div>
+             
+              <h1>{{success}}</h1>
+             
+              <form action="" method="POST" enctype="multipart/form-data">
+                  {%csrf_token%}
+                  
+                  <div>
+                  {{ form.as_p }}
+               
+                <div class="d-flex ">
+                  <button>
+                   Save Changes
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+        {% endblock%}

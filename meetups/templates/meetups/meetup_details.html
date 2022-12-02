@@ -1,0 +1,47 @@
+{% extends 'meetups/main.html'%}
+{%block title%}meetup details{%endblock %}
+{% block content%}
+
+    <section class="about_section layout_padding">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="img-box ">
+            <img src="{{meetup.image.url}}" class="box_img" alt="about img">
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="detail-box pr-md-2">
+            <div class="heading_container">
+              <h2 class="">
+                {{meetup.title}}
+              </h2>
+            </div>
+            <p class="detail_p_mt">
+            {{meetup.description}}
+            
+            </p>
+           
+            <a href="about.html" class="">
+            Join Us
+            </a>
+            <form action="{% url 'confirm-registration'%}"  method="POST" >
+              {% csrf_token %}
+              <ul>
+    
+                {{ form.as_ul }}
+              </ul>
+               <button class="" >Register</button>
+              </form>
+        </div>
+      </div>
+            </div>
+            </div>
+            </div>
+    </div>
+  </section>
+
+  
+
+  
+{%endblock%}

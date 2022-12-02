@@ -1,0 +1,39 @@
+{% extends 'meetups/main.html'%}
+{%block title%}Resister{%endblock %}
+{%block page_title%}
+<h2 >Register </h2>
+{%endblock%}
+{% block content%}
+
+<section class="contact_section layout_padding">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8">
+        <div class="form_container">
+          <div class="heading_container">
+            <h2>
+              Create an account
+            </h2>
+          </div>
+          <form action="" method="POST" >
+            {%csrf_token%}
+            {{ form.as_ul}}
+            
+            <div class="d-flex ">
+              <button>
+                REGISTER
+              </button>
+            </div>
+            <br>
+            <br>
+            <p> Already have an account? <a href="{% url 'login'%}"> Login</a></p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+ 
+ 
+       
+{% endblock%}

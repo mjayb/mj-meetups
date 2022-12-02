@@ -1,0 +1,47 @@
+<section class=" slider_section position-relative">
+    <div class="custom_nav2">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg custom_nav-container ">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="d-flex  flex-column flex-lg-row align-items-center">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'meetups' %}">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'meetup-about' %}">About </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'meetup-services' %}">Services </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'meetup-team' %}">Team</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'meetup-contact' %}">Contact Us</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'register' %}">Register</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'login' %}">Login</a>
+                </li>
+                
+              </ul>
+              <form action="" method="GET" class="form-inline my-2 my-lg-0 header-search">
+                {% csrf_token %}
+                <input class="form-control mr-sm-2" type="search" placeholder="Search for events..." name="q" required="">
+                <button class="btn btn1 my-2 my-sm-0" type="submit">
+                  <i class="bi bi-search" aria-hidden="true"></i>
+                </button>
+                
+              </form>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>

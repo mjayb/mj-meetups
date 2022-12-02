@@ -1,0 +1,1 @@
+web: gunicorn mjayb_project.wsgi

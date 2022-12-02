@@ -1,0 +1,17 @@
+
+{% extends 'meetups/main.html'%}
+{%block title%}Home{%endblock %}
+{% block content%}
+
+
+<h2>Sign up Form</h2>
+<form method="POST" action="">
+   {% csrf_token %}
+   <p>{{form.as_p}}</p>
+
+   <input name='pass' type='password'/>
+         <button type="submit">Sign up</button>
+        </form>
+
+
+        {% endblock%}

@@ -1,0 +1,39 @@
+{% extends 'meetups/main.html'%}
+{%block title%}Home{%endblock %}
+{% block content%}
+<div class="container">
+  <div class="row">
+    {% for meetup in meetups %}
+    <div class="col-md-3 ">
+      <div class="card">
+        <img src="{{ meetup.image.url }}" class="card-ing-top" style="width:250px; height:200px;">
+       
+        <div class="card-body">
+          <div class="card-title" style="color:black;">
+            <strong>{{ meetup.title }}</strong>
+          
+            </div>
+            <div class="card-text" style="color:black;">
+              
+            {{ meetup.location.name}}
+
+            </div>
+            <div class="btn-box">
+              <a href="{% url 'meetup_details' meetup.slug%}" target='_new' class="btn-1"> 
+                View More
+              </a>
+            </div>
+            </div>
+            
+            </div>
+            
+            </div>
+
+            {% endfor %}
+         
+          </div>
+</div> </br>
+
+
+
+{% endblock %}

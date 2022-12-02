@@ -1,0 +1,40 @@
+
+{% extends 'meetups/main.html'%}
+{% load static %}
+{%block title%}Success{%endblock %}
+{% block content%}
+
+
+      <div class="slider_container">
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="container">
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="detail-box">
+                      <h1>
+                        registration successful
+                      </h1>
+                      <h3 style="color:rgb(140, 161, 206); font-family:  'Arial Narrow', Arial, sans-serif;">Thank you for registering! see you at the event</h3>
+                      <p>
+                       Got questions or can't make it? please contact our organizer<br> Of course you can explore other meetups
+                      </p>
+                    
+                      <div class="btn-box">
+                        <a href="{% url 'meetups'%}" class="btn-1">
+                          Explore Our Meetups
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+                        {% endblock content%}
+                        
+
